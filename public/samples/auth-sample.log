@@ -1,0 +1,51 @@
+Aug 26 02:09:58 web-server-01 sshd[2451]: Failed password for invalid user admin from 185.203.116.42 port 51201 ssh2
+Aug 26 02:10:01 web-server-01 sshd[2452]: Failed password for invalid user admin from 185.203.116.42 port 51203 ssh2
+Aug 26 02:10:03 web-server-01 sshd[2453]: Failed password for invalid user admin from 185.203.116.42 port 51207 ssh2
+Aug 26 02:10:05 web-server-01 sshd[2454]: Failed password for invalid user root from 185.203.116.42 port 51210 ssh2
+Aug 26 02:10:07 web-server-01 sshd[2455]: Failed password for invalid user root from 185.203.116.42 port 51214 ssh2
+Aug 26 02:10:09 web-server-01 sshd[2456]: Failed password for admin from 185.203.116.42 port 51219 ssh2
+Aug 26 02:10:12 web-server-01 sshd[2457]: Failed password for admin from 185.203.116.42 port 51223 ssh2
+Aug 26 02:10:14 web-server-01 sshd[2458]: Failed password for admin from 185.203.116.42 port 51228 ssh2
+Aug 26 02:10:16 web-server-01 sshd[2459]: Failed password for invalid user oracle from 185.203.116.42 port 51232 ssh2
+Aug 26 02:10:18 web-server-01 sshd[2460]: Failed password for invalid user postgres from 185.203.116.42 port 51236 ssh2
+Aug 26 02:10:21 web-server-01 sshd[2461]: Failed password for admin from 185.203.116.42 port 51241 ssh2
+Aug 26 02:10:23 web-server-01 sshd[2462]: Failed password for admin from 185.203.116.42 port 51244 ssh2
+Aug 26 02:10:25 web-server-01 sshd[2463]: Failed password for admin from 185.203.116.42 port 51248 ssh2
+Aug 26 02:10:28 web-server-01 sshd[2464]: Failed password for admin from 185.203.116.42 port 51251 ssh2
+Aug 26 02:10:31 web-server-01 sshd[2465]: Failed password for admin from 185.203.116.42 port 51255 ssh2
+Aug 26 02:11:20 web-server-01 sshd[2480]: Accepted password for admin from 185.203.116.42 port 51260 ssh2
+Aug 26 02:11:21 web-server-01 sshd[2480]: pam_unix(sshd:session): session opened for user admin by (uid=0)
+Aug 26 02:12:05 web-server-01 audit[2490]: privilege escalation by admin from 185.203.116.42 COMMAND=/bin/bash (sudo to root)
+Aug 26 02:12:41 web-server-01 audit[2491]: sudo: admin : TTY=pts/0 ; PWD=/root ; USER=root ; COMMAND=/usr/bin/wget
+Aug 26 09:03:11 app-srv-05 sshd[6620]: Accepted password for r.mehta from 10.0.0.9 port 44122 ssh2
+Aug 26 22:05:01 edge-fw-02 ids[771]: port scan detected from 203.0.113.9 across DMZ range
+Aug 26 22:05:02 edge-fw-02 kernel: [FW] BLOCK SRC=203.0.113.9 DST=10.10.0.5 PROTO=TCP SPT=40001 DPT=21
+Aug 26 22:05:02 edge-fw-02 kernel: [FW] BLOCK SRC=203.0.113.9 DST=10.10.0.5 PROTO=TCP SPT=40002 DPT=22
+Aug 26 22:05:02 edge-fw-02 kernel: [FW] BLOCK SRC=203.0.113.9 DST=10.10.0.5 PROTO=TCP SPT=40003 DPT=23
+Aug 26 22:05:02 edge-fw-02 kernel: [FW] BLOCK SRC=203.0.113.9 DST=10.10.0.5 PROTO=TCP SPT=40004 DPT=25
+Aug 26 22:05:03 edge-fw-02 kernel: [FW] BLOCK SRC=203.0.113.9 DST=10.10.0.5 PROTO=TCP SPT=40005 DPT=53
+Aug 26 22:05:03 edge-fw-02 kernel: [FW] BLOCK SRC=203.0.113.9 DST=10.10.0.5 PROTO=TCP SPT=40006 DPT=80
+Aug 26 22:05:03 edge-fw-02 kernel: [FW] BLOCK SRC=203.0.113.9 DST=10.10.0.5 PROTO=TCP SPT=40007 DPT=110
+Aug 26 22:05:03 edge-fw-02 kernel: [FW] BLOCK SRC=203.0.113.9 DST=10.10.0.5 PROTO=TCP SPT=40008 DPT=143
+Aug 26 22:05:04 edge-fw-02 kernel: [FW] BLOCK SRC=203.0.113.9 DST=10.10.0.5 PROTO=TCP SPT=40009 DPT=443
+Aug 26 22:05:04 edge-fw-02 kernel: [FW] BLOCK SRC=203.0.113.9 DST=10.10.0.5 PROTO=TCP SPT=40010 DPT=445
+Aug 26 22:05:04 edge-fw-02 kernel: [FW] BLOCK SRC=203.0.113.9 DST=10.10.0.5 PROTO=TCP SPT=40011 DPT=993
+Aug 26 22:05:04 edge-fw-02 kernel: [FW] BLOCK SRC=203.0.113.9 DST=10.10.0.5 PROTO=TCP SPT=40012 DPT=995
+Aug 26 22:05:05 edge-fw-02 kernel: [FW] BLOCK SRC=203.0.113.9 DST=10.10.0.5 PROTO=TCP SPT=40013 DPT=1433
+Aug 26 22:05:05 edge-fw-02 kernel: [FW] BLOCK SRC=203.0.113.9 DST=10.10.0.5 PROTO=TCP SPT=40014 DPT=3306
+Aug 26 22:05:05 edge-fw-02 kernel: [FW] BLOCK SRC=203.0.113.9 DST=10.10.0.5 PROTO=TCP SPT=40015 DPT=3389
+Aug 26 22:05:05 edge-fw-02 kernel: [FW] BLOCK SRC=203.0.113.9 DST=10.10.0.5 PROTO=TCP SPT=40016 DPT=5432
+Aug 26 22:05:06 edge-fw-02 kernel: [FW] BLOCK SRC=203.0.113.9 DST=10.10.0.5 PROTO=TCP SPT=40017 DPT=8080
+Aug 26 22:05:06 edge-fw-02 kernel: [FW] BLOCK SRC=203.0.113.9 DST=10.10.0.5 PROTO=TCP SPT=40018 DPT=27017
+Aug 26 01:52:03 database-01 named[901]: client 10.0.0.31#53 (a1.exfil-delivery.net): query: a1.exfil-delivery.net IN TXT
+Aug 26 01:52:05 database-01 named[901]: client 10.0.0.31#53 (b2f.exfil-delivery.net): query: b2f.exfil-delivery.net IN TXT
+Aug 26 01:52:07 database-01 named[901]: client 10.0.0.31#53 (c93.exfil-delivery.net): query: c93.exfil-delivery.net IN TXT
+Aug 26 01:52:09 database-01 named[901]: client 10.0.0.31#53 (d40.exfil-delivery.net): query: d40.exfil-delivery.net IN TXT
+Aug 26 01:52:11 database-01 named[901]: client 10.0.0.31#53 (e5a.exfil-delivery.net): query: e5a.exfil-delivery.net IN TXT
+Aug 26 01:52:13 database-01 named[901]: client 10.0.0.31#53 (f6b.exfil-delivery.net): query: f6b.exfil-delivery.net IN TXT
+Aug 26 01:52:15 database-01 named[901]: client 10.0.0.31#53 (a7c.exfil-delivery.net): query: a7c.exfil-delivery.net IN TXT
+Aug 26 01:52:17 database-01 named[901]: client 10.0.0.31#53 (b8d.exfil-delivery.net): query: b8d.exfil-delivery.net IN TXT
+Aug 26 01:52:19 database-01 named[901]: client 10.0.0.31#53 (c9e.exfil-delivery.net): query: c9e.exfil-delivery.net IN TXT
+Aug 26 19:12:40 emp-pc-114 http-proxy[3312]: user t.rao downloaded file http://cdn-sync.update-delivery.net/payload.exe
+Aug 26 19:12:44 emp-pc-114 clamd[3320]: FOUND Win.Trojan.Agent malware in /tmp/payload.exe — quarantined
+Aug 26 08:15:22 app-srv-05 api[6600]: api_request success from 192.168.4.22 path=/health status=200
