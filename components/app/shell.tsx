@@ -17,6 +17,7 @@ import {
   ShieldCheck,
   Database,
   Upload,
+  BrainCircuit,
 } from "lucide-react";
 import { ThemeToggle } from "@/components/theme-toggle";
 import { LogoMark } from "@/components/logo-mark";
@@ -31,6 +32,7 @@ const nav = [
       { href: "/dashboard", label: "Dashboard", icon: LayoutGrid },
       { href: "/incidents", label: "Incidents", icon: Siren },
       { href: "/analyst", label: "AI Analyst", icon: Bot },
+      { href: "/ml", label: "ML Detection", icon: BrainCircuit },
     ],
   },
   {
