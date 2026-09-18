@@ -1,0 +1,47 @@
+{
+  "dataset": "CIC-IDS2017",
+  "experiment": "baseline_isolation_forest",
+  "model": {
+    "algorithm": "IsolationForest",
+    "n_estimators": 800,
+    "max_samples": 1.0,
+    "max_features": 0.7,
+    "contamination": 0.01,
+    "bootstrap": false,
+    "random_state": 42
+  },
+  "data": {
+    "training_rows": 529918,
+    "calibration_rows": 432074,
+    "test_rows": 1854916,
+    "test_normal": 1311105,
+    "test_attacks": 543811,
+    "features": 70
+  },
+  "threshold_calibration": {
+    "target_fpr": 0.05,
+    "threshold": 0.05896307051553423,
+    "calibration_rows": 432074
+  },
+  "metrics": {
+    "accuracy": 0.7958101606757395,
+    "precision": 0.7406485099434303,
+    "recall": 0.46707036084227793,
+    "f1": 0.5728733319725605,
+    "roc_auc": 0.825725612921292,
+    "pr_auc": 0.6677429177101358,
+    "actual_test_fpr": 0.06783743483550135
+  },
+  "confusion_matrix": {
+    "tn": 1222163,
+    "fp": 88942,
+    "fn": 289813,
+    "tp": 253998
+  },
+  "notes": [
+    "Model trained using normal training traffic only.",
+    "Threshold calibrated using normal calibration traffic only.",
+    "Test set was not used during model fitting or threshold selection.",
+    "Lower Isolation Forest decision_function scores indicate more anomalous traffic."
+  ]
+}

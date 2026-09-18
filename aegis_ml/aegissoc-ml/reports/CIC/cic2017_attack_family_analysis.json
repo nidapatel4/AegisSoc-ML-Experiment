@@ -1,0 +1,132 @@
+{
+  "experiment": "CIC-IDS2017 attack-family analysis",
+  "model": "CIC Isolation Forest baseline",
+  "threshold": 0.058963,
+  "test_files": [
+    "Wednesday-workingHours.pcap_ISCX.csv",
+    "Thursday-WorkingHours-Afternoon-Infilteration.pcap_ISCX.csv",
+    "Thursday-WorkingHours-Morning-WebAttacks.pcap_ISCX.csv",
+    "Friday-WorkingHours-Morning.pcap_ISCX.csv",
+    "Friday-WorkingHours-Afternoon-PortScan.pcap_ISCX.csv",
+    "Friday-WorkingHours-Afternoon-DDos.pcap_ISCX.csv"
+  ],
+  "test_rows": 1854916,
+  "overall_confusion_matrix": {
+    "tn": 1222163,
+    "fp": 88942,
+    "fn": 289813,
+    "tp": 253998
+  },
+  "family_results": {
+    "Bot": {
+      "total_attacks": 1966,
+      "detected": 44,
+      "missed": 1922,
+      "recall": 0.022380467955239063
+    },
+    "DoS/DDoS": {
+      "total_attacks": 380688,
+      "detected": 253009,
+      "missed": 127679,
+      "recall": 0.6646098642457866
+    },
+    "Heartbleed": {
+      "total_attacks": 11,
+      "detected": 11,
+      "missed": 0,
+      "recall": 1.0
+    },
+    "Infiltration": {
+      "total_attacks": 36,
+      "detected": 31,
+      "missed": 5,
+      "recall": 0.8611111111111112
+    },
+    "PortScan": {
+      "total_attacks": 158930,
+      "detected": 810,
+      "missed": 158120,
+      "recall": 0.005096583401497515
+    },
+    "WebAttack": {
+      "total_attacks": 2180,
+      "detected": 93,
+      "missed": 2087,
+      "recall": 0.0426605504587156
+    }
+  },
+  "exact_attack_label_results": {
+    "Bot": {
+      "total": 1966,
+      "detected": 44,
+      "missed": 1922,
+      "recall": 0.022380467955239063
+    },
+    "DDoS": {
+      "total": 128027,
+      "detected": 81056,
+      "missed": 46971,
+      "recall": 0.6331164519984066
+    },
+    "DoS GoldenEye": {
+      "total": 10293,
+      "detected": 7789,
+      "missed": 2504,
+      "recall": 0.7567278733119596
+    },
+    "DoS Hulk": {
+      "total": 231073,
+      "detected": 155586,
+      "missed": 75487,
+      "recall": 0.6733196868522069
+    },
+    "DoS Slowhttptest": {
+      "total": 5499,
+      "detected": 5248,
+      "missed": 251,
+      "recall": 0.9543553373340607
+    },
+    "DoS slowloris": {
+      "total": 5796,
+      "detected": 3330,
+      "missed": 2466,
+      "recall": 0.5745341614906833
+    },
+    "Heartbleed": {
+      "total": 11,
+      "detected": 11,
+      "missed": 0,
+      "recall": 1.0
+    },
+    "Infiltration": {
+      "total": 36,
+      "detected": 31,
+      "missed": 5,
+      "recall": 0.8611111111111112
+    },
+    "PortScan": {
+      "total": 158930,
+      "detected": 810,
+      "missed": 158120,
+      "recall": 0.005096583401497515
+    },
+    "Web Attack � Brute Force": {
+      "total": 1507,
+      "detected": 74,
+      "missed": 1433,
+      "recall": 0.0491041804910418
+    },
+    "Web Attack � Sql Injection": {
+      "total": 21,
+      "detected": 0,
+      "missed": 21,
+      "recall": 0.0
+    },
+    "Web Attack � XSS": {
+      "total": 652,
+      "detected": 19,
+      "missed": 633,
+      "recall": 0.029141104294478526
+    }
+  }
+}

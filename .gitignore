@@ -35,7 +35,7 @@ env/
 # ML datasets
 aegis_ml/aegissoc-ml/data/*.csv
 aegis_ml/aegissoc-ml/data/*.txt
-
+aegis_ml/aegissoc-ml/data/MachineLearningCVE/
 # ML generated model artifacts
 # ML generated model artifacts
 aegis_ml/aegissoc-ml/models/

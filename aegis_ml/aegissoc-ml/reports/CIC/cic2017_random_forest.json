@@ -1,0 +1,219 @@
+{
+  "experiment": "CIC-IDS2017 supervised Random Forest baseline",
+  "dataset": "CIC-IDS2017",
+  "dataset_source": "Canadian Institute for Cybersecurity",
+  "random_state": 42,
+  "model": {
+    "type": "RandomForestClassifier",
+    "n_estimators": 300,
+    "max_features": "sqrt",
+    "class_weight": "balanced_subsample",
+    "bootstrap": true,
+    "n_jobs": -1
+  },
+  "split": {
+    "training_source": "Monday BENIGN + Tuesday all traffic",
+    "training": "80% stratified split of combined Monday/Tuesday data",
+    "validation": "20% stratified split of combined Monday/Tuesday data",
+    "test": "Wednesday + Thursday + Friday all traffic"
+  },
+  "feature_count": 70,
+  "features": [
+    "Destination Port",
+    "Flow Duration",
+    "Total Fwd Packets",
+    "Total Backward Packets",
+    "Total Length of Fwd Packets",
+    "Total Length of Bwd Packets",
+    "Fwd Packet Length Max",
+    "Fwd Packet Length Min",
+    "Fwd Packet Length Mean",
+    "Fwd Packet Length Std",
+    "Bwd Packet Length Max",
+    "Bwd Packet Length Min",
+    "Bwd Packet Length Mean",
+    "Bwd Packet Length Std",
+    "Flow Bytes/s",
+    "Flow Packets/s",
+    "Flow IAT Mean",
+    "Flow IAT Std",
+    "Flow IAT Max",
+    "Flow IAT Min",
+    "Fwd IAT Total",
+    "Fwd IAT Mean",
+    "Fwd IAT Std",
+    "Fwd IAT Max",
+    "Fwd IAT Min",
+    "Bwd IAT Total",
+    "Bwd IAT Mean",
+    "Bwd IAT Std",
+    "Bwd IAT Max",
+    "Bwd IAT Min",
+    "Fwd PSH Flags",
+    "Fwd URG Flags",
+    "Fwd Header Length",
+    "Bwd Header Length",
+    "Fwd Packets/s",
+    "Bwd Packets/s",
+    "Min Packet Length",
+    "Max Packet Length",
+    "Packet Length Mean",
+    "Packet Length Std",
+    "Packet Length Variance",
+    "FIN Flag Count",
+    "SYN Flag Count",
+    "RST Flag Count",
+    "PSH Flag Count",
+    "ACK Flag Count",
+    "URG Flag Count",
+    "CWE Flag Count",
+    "ECE Flag Count",
+    "Down/Up Ratio",
+    "Average Packet Size",
+    "Avg Fwd Segment Size",
+    "Avg Bwd Segment Size",
+    "Fwd Header Length.1",
+    "Subflow Fwd Packets",
+    "Subflow Fwd Bytes",
+    "Subflow Bwd Packets",
+    "Subflow Bwd Bytes",
+    "Init_Win_bytes_forward",
+    "Init_Win_bytes_backward",
+    "act_data_pkt_fwd",
+    "min_seg_size_forward",
+    "Active Mean",
+    "Active Std",
+    "Active Max",
+    "Active Min",
+    "Idle Mean",
+    "Idle Std",
+    "Idle Max",
+    "Idle Min"
+  ],
+  "threshold": 0.5,
+  "training_rows": 780661,
+  "training_normal_rows": 769593,
+  "training_attack_rows": 11068,
+  "validation_rows": 195166,
+  "validation_normal_rows": 192399,
+  "validation_attack_rows": 2767,
+  "test_rows": 1854916,
+  "test_normal_rows": 1311105,
+  "test_attack_rows": 543811,
+  "validation": {
+    "accuracy": 0.9999897523134152,
+    "precision": 1.0,
+    "recall": 0.9992771955186122,
+    "f1": 0.9996384671005062,
+    "roc_auc": 0.9999999981216002,
+    "pr_auc": 0.9999998694356067,
+    "actual_fpr": 0.0,
+    "confusion_matrix": {
+      "TN": 192399,
+      "FP": 0,
+      "FN": 2,
+      "TP": 2765
+    }
+  },
+  "test": {
+    "accuracy": 0.706827155515398,
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "roc_auc": 0.6058610358126925,
+    "pr_auc": 0.414125582849539,
+    "actual_fpr": 0.0,
+    "confusion_matrix": {
+      "TN": 1311105,
+      "FP": 0,
+      "FN": 543811,
+      "TP": 0
+    }
+  },
+  "top_20_feature_importance": [
+    {
+      "feature": "Destination Port",
+      "importance": 0.2853950817789914
+    },
+    {
+      "feature": "min_seg_size_forward",
+      "importance": 0.07885818636435446
+    },
+    {
+      "feature": "Init_Win_bytes_forward",
+      "importance": 0.07313725930239372
+    },
+    {
+      "feature": "Init_Win_bytes_backward",
+      "importance": 0.03925217641586676
+    },
+    {
+      "feature": "Fwd Packet Length Min",
+      "importance": 0.038319874972877754
+    },
+    {
+      "feature": "Average Packet Size",
+      "importance": 0.031379032017353724
+    },
+    {
+      "feature": "Packet Length Mean",
+      "importance": 0.029314471306774337
+    },
+    {
+      "feature": "Bwd Packet Length Mean",
+      "importance": 0.0282787168092222
+    },
+    {
+      "feature": "Bwd Packet Length Min",
+      "importance": 0.02607157833699813
+    },
+    {
+      "feature": "Avg Bwd Segment Size",
+      "importance": 0.023372757735665915
+    },
+    {
+      "feature": "Min Packet Length",
+      "importance": 0.021764883982062725
+    },
+    {
+      "feature": "Bwd Header Length",
+      "importance": 0.020543978216053783
+    },
+    {
+      "feature": "Avg Fwd Segment Size",
+      "importance": 0.02007364212178646
+    },
+    {
+      "feature": "Packet Length Variance",
+      "importance": 0.01916095981478022
+    },
+    {
+      "feature": "Fwd Packet Length Mean",
+      "importance": 0.01701946925643075
+    },
+    {
+      "feature": "Max Packet Length",
+      "importance": 0.015260969576712977
+    },
+    {
+      "feature": "Fwd Packet Length Max",
+      "importance": 0.014526770877148128
+    },
+    {
+      "feature": "Fwd Packet Length Std",
+      "importance": 0.013666194451547658
+    },
+    {
+      "feature": "Fwd Header Length",
+      "importance": 0.013559010236289441
+    },
+    {
+      "feature": "Packet Length Std",
+      "importance": 0.01312282834642796
+    }
+  ],
+  "training_time_seconds": 659.7251672744751,
+  "total_runtime_seconds": 821.3825800418854,
+  "model_path": "C:\\Users\\Amaan\\Desktop\\Projects\\AegisSoc-ML-Experiment\\aegis_ml\\aegissoc-ml\\models\\CIC\\cic2017_random_forest.joblib",
+  "preprocessor_path": "C:\\Users\\Amaan\\Desktop\\Projects\\AegisSoc-ML-Experiment\\aegis_ml\\aegissoc-ml\\models\\CIC\\cic2017_random_forest_preprocessor.joblib"
+}
