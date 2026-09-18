@@ -1,0 +1,22 @@
+{
+  "model": "LocalOutlierFactor",
+  "preprocessing": "Log1p + StandardScaler + OneHotEncoder",
+  "fit_records": 42000,
+  "calibration_records": 14000,
+  "processed_dimensions": 63,
+  "n_neighbors": 35,
+  "target_fpr": 0.05,
+  "threshold": 0.10791392179677865,
+  "fpr": 0.1145135135135135,
+  "precision": 0.8764254673783066,
+  "recall": 0.6628871437395217,
+  "f1": 0.7548449490699456,
+  "roc_auc": 0.8332826322197076,
+  "pr_auc": 0.854628963787077,
+  "confusion_matrix": {
+    "tn": 32763,
+    "fp": 4237,
+    "fn": 15282,
+    "tp": 30050
+  }
+}

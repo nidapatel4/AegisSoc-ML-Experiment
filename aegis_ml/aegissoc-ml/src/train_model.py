@@ -114,7 +114,7 @@ def main():
     calib_scores = model.decision_function(X_calib)  # higher = more normal
 
     threshold_table = {}
-    for fpr in (0.01, 0.05, 0.10):
+    for fpr in (0.01, 0.02, 0.03, 0.04, 0.05, 0.06, 0.07, 0.08, 0.09, 0.10):
         thr = float(np.quantile(calib_scores, fpr))
         threshold_table[f"fpr_{int(fpr*100)}pct"] = thr
     operating_threshold = threshold_table[f"fpr_{int(TARGET_FPR*100)}pct"]
@@ -167,15 +167,24 @@ def main():
     sweep_rows = []
     for name, thr in threshold_table.items():
         yp = (test_scores < thr).astype(int)
+        tn, fp, fn, tp = confusion_matrix(y_true, yp).ravel()
+        fpr_actual = fp / (fp + tn)
         p, r, f, _ = precision_recall_fscore_support(y_true, yp, average="binary", zero_division=0)
         sweep_rows.append({"operating_point": name, "threshold": thr,
                             "precision": p, "recall": r, "f1": f,
-                            "flag_rate": float(yp.mean())})
+                            "flag_rate": float(yp.mean()),
+                            "fpr_actual": float(fpr_actual)})
     print("\nThreshold sweep (precision/recall trade-off analysts can tune):")
     for row in sweep_rows:
-        print(f"  {row['operating_point']:>10}: P={row['precision']:.3f} "
-              f"R={row['recall']:.3f} F1={row['f1']:.3f} "
-              f"flag_rate={row['flag_rate']:.3f}")
+        # print(f"  {row['operating_point']:>10}: P={row['precision']:.3f} "
+        #       f"R={row['recall']:.3f} F1={row['f1']:.3f} "
+        #       f"flag_rate={row['flag_rate']:.3f}")
+      print(f"  {row['operating_point']:>10}: "
+      f"P={row['precision']:.3f} "
+      f"R={row['recall']:.3f} "
+      f"F1={row['f1']:.3f} "
+      f"FPR={row['fpr_actual']:.3f} "
+      f"flag_rate={row['flag_rate']:.3f}")
 
     # Recall broken down by attack family (this is the interesting real finding:
     # DoS/Probe are loud & easy, R2L/U2R are quiet & hard — genuinely reported).

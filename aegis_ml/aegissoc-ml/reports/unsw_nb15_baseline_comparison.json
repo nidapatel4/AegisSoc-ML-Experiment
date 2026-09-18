@@ -1,0 +1,97 @@
+{
+  "dataset": "UNSW-NB15",
+  "training_file": "UNSW_NB15_training-set.csv",
+  "testing_file": "UNSW_NB15_testing-set.csv",
+  "methodology": {
+    "normal_only_training": true,
+    "normal_split": "75% fit / 25% calibration",
+    "random_state": 42,
+    "target_calibration_fpr": 0.05
+  },
+  "experiments": [
+    {
+      "preprocessing": "standard_scaler",
+      "log_transform": false,
+      "input_features": 42,
+      "numerical_features": 39,
+      "categorical_features": 3,
+      "output_dimensions": 64,
+      "model": {
+        "algorithm": "IsolationForest",
+        "n_estimators": 800,
+        "max_samples": 1.0,
+        "max_features": 0.7,
+        "contamination": 0.01,
+        "random_state": 42
+      },
+      "calibration": {
+        "normal_fit_rows": 42000,
+        "normal_calibration_rows": 14000,
+        "target_fpr": 0.05,
+        "threshold": 0.06770230817655708
+      },
+      "test": {
+        "rows": 82332,
+        "normal": 37000,
+        "attack": 45332
+      },
+      "metrics": {
+        "actual_fpr": 0.06672972972972974,
+        "precision": 0.916273864830954,
+        "recall": 0.5960469425571341,
+        "f1": 0.7222571203271809,
+        "roc_auc": 0.8424246865766322,
+        "pr_auc": 0.8863246531223266
+      },
+      "confusion_matrix": {
+        "tn": 34531,
+        "fp": 2469,
+        "fn": 18312,
+        "tp": 27020
+      },
+      "training_time_seconds": 95.88878607749939
+    },
+    {
+      "preprocessing": "log1p_plus_standard_scaler",
+      "log_transform": true,
+      "input_features": 42,
+      "numerical_features": 39,
+      "categorical_features": 3,
+      "output_dimensions": 64,
+      "model": {
+        "algorithm": "IsolationForest",
+        "n_estimators": 800,
+        "max_samples": 1.0,
+        "max_features": 0.7,
+        "contamination": 0.01,
+        "random_state": 42
+      },
+      "calibration": {
+        "normal_fit_rows": 42000,
+        "normal_calibration_rows": 14000,
+        "target_fpr": 0.05,
+        "threshold": 0.06765935649521577
+      },
+      "test": {
+        "rows": 82332,
+        "normal": 37000,
+        "attack": 45332
+      },
+      "metrics": {
+        "actual_fpr": 0.06935135135135136,
+        "precision": 0.9175078762939626,
+        "recall": 0.629577340510015,
+        "f1": 0.7467489991888852,
+        "roc_auc": 0.8540861347869533,
+        "pr_auc": 0.8942639182143377
+      },
+      "confusion_matrix": {
+        "tn": 34434,
+        "fp": 2566,
+        "fn": 16792,
+        "tp": 28540
+      },
+      "training_time_seconds": 88.59572458267212
+    }
+  ]
+}

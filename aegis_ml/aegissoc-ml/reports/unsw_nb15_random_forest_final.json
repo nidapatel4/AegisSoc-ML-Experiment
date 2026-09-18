@@ -1,0 +1,33 @@
+{
+  "dataset": "UNSW-NB15",
+  "experiment": "Final Random Forest evaluation",
+  "note": "Official test set evaluated after threshold selection on validation data.",
+  "thresholds_evaluated": [
+    {
+      "threshold": 0.5,
+      "fpr": 0.2728648648648649,
+      "precision": 0.815857150673938,
+      "recall": 0.9867422571252096,
+      "f1": 0.8931998122984455,
+      "roc_auc": 0.9804560596178106,
+      "pr_auc": 0.9843758076855925,
+      "tn": 26904,
+      "fp": 10096,
+      "fn": 601,
+      "tp": 44731
+    },
+    {
+      "threshold": 0.65,
+      "fpr": 0.1732972972972973,
+      "precision": 0.8721027645908964,
+      "recall": 0.964484249536751,
+      "f1": 0.9159700835899692,
+      "roc_auc": 0.9804560596178106,
+      "pr_auc": 0.9843758076855925,
+      "tn": 30588,
+      "fp": 6412,
+      "fn": 1610,
+      "tp": 43722
+    }
+  ]
+}

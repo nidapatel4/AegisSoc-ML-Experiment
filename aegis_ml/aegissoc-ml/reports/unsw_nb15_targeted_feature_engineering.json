@@ -1,0 +1,32 @@
+{
+  "experiment": "targeted_feature_engineering",
+  "features_added": [
+    "total_bytes",
+    "total_packets",
+    "byte_ratio",
+    "packet_ratio",
+    "load_ratio",
+    "loss_rate",
+    "connection_activity",
+    "tcp_handshake_time"
+  ],
+  "preprocessing": "Log1p + StandardScaler + OneHotEncoder",
+  "model": "IsolationForest",
+  "n_estimators": 800,
+  "max_samples": 1.0,
+  "max_features": 0.7,
+  "target_fpr": 0.05,
+  "threshold": 0.06963101086901279,
+  "fpr": 0.07448648648648648,
+  "precision": 0.906299935402713,
+  "recall": 0.5880393540986499,
+  "f1": 0.7132784801658973,
+  "roc_auc": 0.84663615821769,
+  "pr_auc": 0.8833808465759854,
+  "confusion_matrix": {
+    "tn": 34244,
+    "fp": 2756,
+    "fn": 18675,
+    "tp": 26657
+  }
+}

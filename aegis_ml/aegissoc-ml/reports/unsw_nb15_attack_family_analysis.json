@@ -1,0 +1,73 @@
+{
+  "model": "IsolationForest",
+  "preprocessing": "Log1p + StandardScaler + OneHotEncoder",
+  "target_fpr": 0.05,
+  "threshold": 0.06836040968239895,
+  "overall_fpr": 0.07305405405405406,
+  "overall_recall": 0.6258272302126533,
+  "attack_families": [
+    {
+      "attack_category": "Analysis",
+      "total": 677,
+      "detected": 386,
+      "missed": 291,
+      "recall": 0.5701624815361891
+    },
+    {
+      "attack_category": "Backdoor",
+      "total": 583,
+      "detected": 397,
+      "missed": 186,
+      "recall": 0.6809605488850772
+    },
+    {
+      "attack_category": "DoS",
+      "total": 4089,
+      "detected": 1856,
+      "missed": 2233,
+      "recall": 0.45390070921985815
+    },
+    {
+      "attack_category": "Exploits",
+      "total": 11132,
+      "detected": 5684,
+      "missed": 5448,
+      "recall": 0.510600071864894
+    },
+    {
+      "attack_category": "Fuzzers",
+      "total": 6062,
+      "detected": 1348,
+      "missed": 4714,
+      "recall": 0.22236885516331245
+    },
+    {
+      "attack_category": "Generic",
+      "total": 18871,
+      "detected": 18469,
+      "missed": 402,
+      "recall": 0.9786974723120131
+    },
+    {
+      "attack_category": "Reconnaissance",
+      "total": 3496,
+      "detected": 218,
+      "missed": 3278,
+      "recall": 0.062356979405034325
+    },
+    {
+      "attack_category": "Shellcode",
+      "total": 378,
+      "detected": 3,
+      "missed": 375,
+      "recall": 0.007936507936507936
+    },
+    {
+      "attack_category": "Worms",
+      "total": 44,
+      "detected": 9,
+      "missed": 35,
+      "recall": 0.20454545454545456
+    }
+  ]
+}

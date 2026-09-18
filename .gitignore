@@ -24,3 +24,20 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+
+# ML datasets
+aegis_ml/aegissoc-ml/data/*.csv
+aegis_ml/aegissoc-ml/data/*.txt
+
+# ML generated model artifacts
+# ML generated model artifacts
+aegis_ml/aegissoc-ml/models/
+# Temporary/generated ML files
+*.log

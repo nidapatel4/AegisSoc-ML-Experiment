@@ -1,0 +1,170 @@
+{
+  "dataset": "UNSW-NB15",
+  "experiment": "Isolation Forest hyperparameter tuning",
+  "preprocessing": "log1p + StandardScaler + OneHotEncoder",
+  "target_fpr": 0.05,
+  "random_state": 42,
+  "results": [
+    {
+      "target_fpr": 0.05,
+      "actual_test_fpr": 0.06935135135135136,
+      "threshold": 0.06765935649521577,
+      "precision": 0.9175078762939626,
+      "recall": 0.629577340510015,
+      "f1": 0.7467489991888852,
+      "roc_auc": 0.8540861347869533,
+      "pr_auc": 0.8942639182143377,
+      "confusion_matrix": {
+        "tn": 34434,
+        "fp": 2566,
+        "fn": 16792,
+        "tp": 28540
+      },
+      "name": "baseline_config",
+      "params": {
+        "n_estimators": 800,
+        "max_samples": 1.0,
+        "max_features": 0.7
+      },
+      "time_seconds": 118.8
+    },
+    {
+      "target_fpr": 0.05,
+      "actual_test_fpr": 0.069,
+      "threshold": 0.07010725920930802,
+      "precision": 0.9176796827137007,
+      "recall": 0.6278125827230213,
+      "f1": 0.7455629052328246,
+      "roc_auc": 0.8518761432172488,
+      "pr_auc": 0.8931937483149863,
+      "confusion_matrix": {
+        "tn": 34447,
+        "fp": 2553,
+        "fn": 16872,
+        "tp": 28460
+      },
+      "name": "max_features_09",
+      "params": {
+        "n_estimators": 800,
+        "max_samples": 1.0,
+        "max_features": 0.9
+      },
+      "time_seconds": 135.1
+    },
+    {
+      "target_fpr": 0.05,
+      "actual_test_fpr": 0.069,
+      "threshold": 0.06595727412279467,
+      "precision": 0.9170349668529832,
+      "recall": 0.6224962498897026,
+      "f1": 0.7415904551666141,
+      "roc_auc": 0.8520556655879385,
+      "pr_auc": 0.8917832542086028,
+      "confusion_matrix": {
+        "tn": 34447,
+        "fp": 2553,
+        "fn": 17113,
+        "tp": 28219
+      },
+      "name": "more_trees",
+      "params": {
+        "n_estimators": 1200,
+        "max_samples": 1.0,
+        "max_features": 0.7
+      },
+      "time_seconds": 159.9
+    },
+    {
+      "target_fpr": 0.05,
+      "actual_test_fpr": 0.06940540540540541,
+      "threshold": 0.07013917451332369,
+      "precision": 0.9165854609237966,
+      "recall": 0.6224741904173652,
+      "f1": 0.7414277831787488,
+      "roc_auc": 0.8520297248408737,
+      "pr_auc": 0.8927176353511668,
+      "confusion_matrix": {
+        "tn": 34432,
+        "fp": 2568,
+        "fn": 17114,
+        "tp": 28218
+      },
+      "name": "max_samples_07",
+      "params": {
+        "n_estimators": 800,
+        "max_samples": 0.7,
+        "max_features": 0.7
+      },
+      "time_seconds": 140.5
+    },
+    {
+      "target_fpr": 0.05,
+      "actual_test_fpr": 0.06986486486486486,
+      "threshold": 0.06841731474002388,
+      "precision": 0.9159267570819918,
+      "recall": 0.6212388599664695,
+      "f1": 0.7403357036764416,
+      "roc_auc": 0.8505993433431668,
+      "pr_auc": 0.8918142893601929,
+      "confusion_matrix": {
+        "tn": 34415,
+        "fp": 2585,
+        "fn": 17170,
+        "tp": 28162
+      },
+      "name": "max_features_10",
+      "params": {
+        "n_estimators": 800,
+        "max_samples": 1.0,
+        "max_features": 1.0
+      },
+      "time_seconds": 35.1
+    },
+    {
+      "target_fpr": 0.05,
+      "actual_test_fpr": 0.07005405405405406,
+      "threshold": 0.07528134140417375,
+      "precision": 0.9141323792486583,
+      "recall": 0.608709079678814,
+      "f1": 0.7307926587038852,
+      "roc_auc": 0.850976077098452,
+      "pr_auc": 0.8895800693326391,
+      "confusion_matrix": {
+        "tn": 34408,
+        "fp": 2592,
+        "fn": 17738,
+        "tp": 27594
+      },
+      "name": "max_samples_05",
+      "params": {
+        "n_estimators": 800,
+        "max_samples": 0.5,
+        "max_features": 0.7
+      },
+      "time_seconds": 112.3
+    },
+    {
+      "target_fpr": 0.05,
+      "actual_test_fpr": 0.069,
+      "threshold": 0.06397400780193581,
+      "precision": 0.9149991676377559,
+      "recall": 0.6062384187770229,
+      "f1": 0.729284700200353,
+      "roc_auc": 0.8471326957748359,
+      "pr_auc": 0.8879765532166178,
+      "confusion_matrix": {
+        "tn": 34447,
+        "fp": 2553,
+        "fn": 17850,
+        "tp": 27482
+      },
+      "name": "max_features_05",
+      "params": {
+        "n_estimators": 800,
+        "max_samples": 1.0,
+        "max_features": 0.5
+      },
+      "time_seconds": 83.1
+    }
+  ]
+}

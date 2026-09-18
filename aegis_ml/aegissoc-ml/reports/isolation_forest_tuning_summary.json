@@ -1,0 +1,34 @@
+{
+  "best_parameters": {
+    "n_estimators": 800,
+    "max_samples": 1.0,
+    "max_features": 0.7,
+    "contamination": 0.01,
+    "bootstrap": false
+  },
+  "final_threshold": 0.05056716692313959,
+  "baseline": {
+    "f1": 0.7695,
+    "recall": 0.6542,
+    "precision": 0.9342,
+    "pr_auc": 0.951,
+    "roc_auc": 0.9378,
+    "unseen_recall": 0.6573,
+    "r2l_recall": 0.0659,
+    "u2r_recall": 0.2687
+  },
+  "tuned": {
+    "precision": 0.9135920474096731,
+    "recall": 0.7447985661965246,
+    "f1": 0.8206052801030264,
+    "pr_auc": 0.9560850361161786,
+    "roc_auc": 0.9487369663393639,
+    "fpr": 0.09309030995777984,
+    "unseen_recall": 0.7176,
+    "dos_recall": 0.8923592493297587,
+    "probe_recall": 0.990086741016109,
+    "r2l_recall": 0.1632582322357019,
+    "u2r_recall": 0.4925373134328358
+  },
+  "training_seconds": 85.38978362083435
+}

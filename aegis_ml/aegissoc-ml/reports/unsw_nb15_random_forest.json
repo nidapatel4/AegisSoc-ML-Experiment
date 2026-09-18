@@ -1,0 +1,146 @@
+{
+  "model": "RandomForestClassifier",
+  "dataset": "UNSW-NB15",
+  "training_rows": 175341,
+  "testing_rows": 82332,
+  "raw_features": 45,
+  "model_features_before_encoding": 42,
+  "processed_features": 192,
+  "preprocessing": {
+    "log1p": true,
+    "log_features": [
+      "spkts",
+      "dpkts",
+      "sbytes",
+      "dbytes",
+      "sloss",
+      "dloss",
+      "dinpkt",
+      "sjit",
+      "djit",
+      "trans_depth",
+      "response_body_len",
+      "ct_flw_http_mthd"
+    ],
+    "standard_scaler": true,
+    "one_hot_encoding": true,
+    "categorical_features": [
+      "proto",
+      "service",
+      "state"
+    ]
+  },
+  "split": {
+    "training_fraction": 0.8,
+    "validation_fraction": 0.2,
+    "random_state": 42,
+    "official_test_used_for_final_evaluation_only": true
+  },
+  "random_forest": {
+    "n_estimators": 300,
+    "max_features": "sqrt",
+    "class_weight": "balanced_subsample",
+    "random_state": 42
+  },
+  "threshold": {
+    "target_fpr": 0.05,
+    "threshold": 0.63,
+    "calibration_method": "95th percentile of normal validation attack probabilities"
+  },
+  "metrics": {
+    "actual_fpr": 0.1857027027027027,
+    "precision": 0.8646748335762398,
+    "recall": 0.9684770140298244,
+    "f1": 0.9136370257840302,
+    "roc_auc": 0.9804560596178106,
+    "pr_auc": 0.9843758076855925
+  },
+  "confusion_matrix": {
+    "tn": 30129,
+    "fp": 6871,
+    "fn": 1429,
+    "tp": 43903
+  },
+  "top_20_features": [
+    {
+      "feature": "numeric__ct_state_ttl",
+      "importance": 0.09273703766611209
+    },
+    {
+      "feature": "numeric__sttl",
+      "importance": 0.06840811893193849
+    },
+    {
+      "feature": "numeric__sload",
+      "importance": 0.058890796571970556
+    },
+    {
+      "feature": "numeric__rate",
+      "importance": 0.05249491588324414
+    },
+    {
+      "feature": "numeric__dload",
+      "importance": 0.05024803380291865
+    },
+    {
+      "feature": "numeric__sbytes",
+      "importance": 0.03933865402527086
+    },
+    {
+      "feature": "numeric__dttl",
+      "importance": 0.03866542831082935
+    },
+    {
+      "feature": "numeric__dur",
+      "importance": 0.03552059385882253
+    },
+    {
+      "feature": "numeric__ct_srv_dst",
+      "importance": 0.03325504478028966
+    },
+    {
+      "feature": "numeric__dinpkt",
+      "importance": 0.03256908951730986
+    },
+    {
+      "feature": "numeric__sinpkt",
+      "importance": 0.03155730546619685
+    },
+    {
+      "feature": "numeric__dbytes",
+      "importance": 0.03154852402449573
+    },
+    {
+      "feature": "numeric__smean",
+      "importance": 0.0315215183019344
+    },
+    {
+      "feature": "numeric__ct_dst_src_ltm",
+      "importance": 0.03082425346261618
+    },
+    {
+      "feature": "numeric__dmean",
+      "importance": 0.028926116164874442
+    },
+    {
+      "feature": "numeric__ct_srv_src",
+      "importance": 0.026857123925360327
+    },
+    {
+      "feature": "numeric__tcprtt",
+      "importance": 0.02663346970837377
+    },
+    {
+      "feature": "numeric__synack",
+      "importance": 0.02661771198229869
+    },
+    {
+      "feature": "numeric__ackdat",
+      "importance": 0.025843405312966375
+    },
+    {
+      "feature": "categorical__state_INT",
+      "importance": 0.021322369166321867
+    }
+  ]
+}

@@ -1,0 +1,180 @@
+{
+  "dataset": "UNSW-NB15",
+  "experiment": "feature engineering and ablation",
+  "preprocessing": "Log1p + StandardScaler + OneHotEncoder",
+  "model": {
+    "algorithm": "IsolationForest",
+    "n_estimators": 800,
+    "max_samples": 1.0,
+    "max_features": 0.7,
+    "contamination": 0.01,
+    "random_state": 42
+  },
+  "target_fpr": 0.05,
+  "results": [
+    {
+      "processed_dimensions": 64,
+      "threshold": 0.06765935649521577,
+      "actual_test_fpr": 0.06935135135135136,
+      "precision": 0.9175078762939626,
+      "recall": 0.629577340510015,
+      "f1": 0.7467489991888852,
+      "roc_auc": 0.8540861347869533,
+      "pr_auc": 0.8942639182143377,
+      "confusion_matrix": {
+        "tn": 34434,
+        "fp": 2566,
+        "fn": 16792,
+        "tp": 28540
+      },
+      "name": "baseline",
+      "engineered_features": [],
+      "time_seconds": 125.0
+    },
+    {
+      "processed_dimensions": 69,
+      "threshold": 0.06844062865237373,
+      "actual_test_fpr": 0.07102702702702703,
+      "precision": 0.9128733879256042,
+      "recall": 0.6074075708109062,
+      "f1": 0.7294522816080535,
+      "roc_auc": 0.850886424123762,
+      "pr_auc": 0.8894823145120225,
+      "confusion_matrix": {
+        "tn": 34372,
+        "fp": 2628,
+        "fn": 17797,
+        "tp": 27535
+      },
+      "name": "all_engineered",
+      "engineered_features": [
+        "bytes_per_packet",
+        "src_dst_byte_ratio",
+        "packet_ratio",
+        "loss_rate",
+        "connection_rate"
+      ],
+      "time_seconds": 138.0
+    },
+    {
+      "processed_dimensions": 68,
+      "threshold": 0.07026143958370644,
+      "actual_test_fpr": 0.06897297297297297,
+      "precision": 0.9157004591550226,
+      "recall": 0.6115106326656666,
+      "f1": 0.7333112889359169,
+      "roc_auc": 0.845009247390424,
+      "pr_auc": 0.8859757343506355,
+      "confusion_matrix": {
+        "tn": 34448,
+        "fp": 2552,
+        "fn": 17611,
+        "tp": 27721
+      },
+      "name": "without_bytes_per_packet",
+      "engineered_features": [
+        "src_dst_byte_ratio",
+        "packet_ratio",
+        "loss_rate",
+        "connection_rate"
+      ],
+      "time_seconds": 135.3
+    },
+    {
+      "processed_dimensions": 68,
+      "threshold": 0.06875038274313548,
+      "actual_test_fpr": 0.06927027027027027,
+      "precision": 0.9146491724666156,
+      "recall": 0.6058854672196241,
+      "f1": 0.7289181406828465,
+      "roc_auc": 0.845876076144529,
+      "pr_auc": 0.8861770644234535,
+      "confusion_matrix": {
+        "tn": 34437,
+        "fp": 2563,
+        "fn": 17866,
+        "tp": 27466
+      },
+      "name": "without_src_dst_byte_ratio",
+      "engineered_features": [
+        "bytes_per_packet",
+        "packet_ratio",
+        "loss_rate",
+        "connection_rate"
+      ],
+      "time_seconds": 97.2
+    },
+    {
+      "processed_dimensions": 68,
+      "threshold": 0.06764657341523325,
+      "actual_test_fpr": 0.07078378378378378,
+      "precision": 0.9131285657423378,
+      "recall": 0.6072752139768817,
+      "f1": 0.729438261791203,
+      "roc_auc": 0.8467442090904105,
+      "pr_auc": 0.8869483301685448,
+      "confusion_matrix": {
+        "tn": 34381,
+        "fp": 2619,
+        "fn": 17803,
+        "tp": 27529
+      },
+      "name": "without_packet_ratio",
+      "engineered_features": [
+        "bytes_per_packet",
+        "src_dst_byte_ratio",
+        "loss_rate",
+        "connection_rate"
+      ],
+      "time_seconds": 121.3
+    },
+    {
+      "processed_dimensions": 68,
+      "threshold": 0.06855344286410608,
+      "actual_test_fpr": 0.06927027027027027,
+      "precision": 0.9148420108316444,
+      "recall": 0.6073855113385688,
+      "f1": 0.7300640337270811,
+      "roc_auc": 0.8470994193589159,
+      "pr_auc": 0.8874022708845812,
+      "confusion_matrix": {
+        "tn": 34437,
+        "fp": 2563,
+        "fn": 17798,
+        "tp": 27534
+      },
+      "name": "without_loss_rate",
+      "engineered_features": [
+        "bytes_per_packet",
+        "src_dst_byte_ratio",
+        "packet_ratio",
+        "connection_rate"
+      ],
+      "time_seconds": 122.9
+    },
+    {
+      "processed_dimensions": 68,
+      "threshold": 0.07138536425943293,
+      "actual_test_fpr": 0.0712972972972973,
+      "precision": 0.9132607766415678,
+      "recall": 0.6127018441718874,
+      "f1": 0.7333817413690673,
+      "roc_auc": 0.8487285122853374,
+      "pr_auc": 0.8856694207923803,
+      "confusion_matrix": {
+        "tn": 34362,
+        "fp": 2638,
+        "fn": 17557,
+        "tp": 27775
+      },
+      "name": "without_connection_rate",
+      "engineered_features": [
+        "bytes_per_packet",
+        "src_dst_byte_ratio",
+        "packet_ratio",
+        "loss_rate"
+      ],
+      "time_seconds": 134.3
+    }
+  ]
+}

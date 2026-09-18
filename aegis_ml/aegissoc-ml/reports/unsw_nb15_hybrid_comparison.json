@@ -1,0 +1,124 @@
+{
+  "experiment": "UNSW-NB15 IF + RF hybrid",
+  "dataset": "UNSW-NB15",
+  "training_file": "UNSW_NB15_training-set.csv",
+  "testing_file": "UNSW_NB15_testing-set.csv",
+  "methodology": {
+    "if_normal_only_training": true,
+    "if_normal_split": "75% model fit / 25% calibration",
+    "random_state": 42,
+    "if_target_fpr": 0.05,
+    "rf_threshold": 0.65,
+    "official_test_used_only_for_evaluation": true,
+    "threshold_tuning_on_official_test": false
+  },
+  "isolation_forest": {
+    "algorithm": "IsolationForest",
+    "n_estimators": 800,
+    "max_samples": 1.0,
+    "max_features": 0.7,
+    "contamination": 0.01,
+    "input_features": 42,
+    "numerical_features": 39,
+    "categorical_features": 3,
+    "processed_dimensions": 64,
+    "normal_fit_rows": 42000,
+    "normal_calibration_rows": 14000,
+    "target_fpr": 0.05,
+    "threshold": 0.06765935649521577,
+    "metrics": {
+      "actual_fpr": 0.06935135135135136,
+      "precision": 0.9175078762939626,
+      "recall": 0.629577340510015,
+      "f1": 0.7467489991888852,
+      "tn": 34434,
+      "fp": 2566,
+      "fn": 16792,
+      "tp": 28540
+    }
+  },
+  "random_forest": {
+    "model_path": "C:\\Users\\Amaan\\Desktop\\Projects\\AegisSoc-ML-Experiment\\aegis_ml\\aegissoc-ml\\models\\unsw_random_forest.joblib",
+    "preprocessor_path": "C:\\Users\\Amaan\\Desktop\\Projects\\AegisSoc-ML-Experiment\\aegis_ml\\aegissoc-ml\\models\\unsw_random_forest_preprocessor.joblib",
+    "threshold": 0.65,
+    "processed_dimensions": 192,
+    "metrics": {
+      "actual_fpr": 0.40113513513513516,
+      "precision": 0.7525260946410111,
+      "recall": 0.9955881055325156,
+      "f1": 0.8571591362315537,
+      "tn": 22158,
+      "fp": 14842,
+      "fn": 200,
+      "tp": 45132
+    }
+  },
+  "hybrid_and": {
+    "logic": "RF predicts attack AND IF predicts anomaly",
+    "metrics": {
+      "actual_fpr": 0.021135135135135135,
+      "precision": 0.9732658712522648,
+      "recall": 0.6280111179740581,
+      "f1": 0.7634179370634059,
+      "tn": 36218,
+      "fp": 782,
+      "fn": 16863,
+      "tp": 28469
+    }
+  },
+  "hybrid_or": {
+    "logic": "RF predicts attack OR IF predicts anomaly",
+    "metrics": {
+      "actual_fpr": 0.44935135135135135,
+      "precision": 0.7310970580148474,
+      "recall": 0.9971543280684726,
+      "f1": 0.8436464758634205,
+      "tn": 20374,
+      "fp": 16626,
+      "fn": 129,
+      "tp": 45203
+    }
+  },
+  "comparison": {
+    "isolation_forest": {
+      "actual_fpr": 0.06935135135135136,
+      "precision": 0.9175078762939626,
+      "recall": 0.629577340510015,
+      "f1": 0.7467489991888852,
+      "tn": 34434,
+      "fp": 2566,
+      "fn": 16792,
+      "tp": 28540
+    },
+    "random_forest": {
+      "actual_fpr": 0.40113513513513516,
+      "precision": 0.7525260946410111,
+      "recall": 0.9955881055325156,
+      "f1": 0.8571591362315537,
+      "tn": 22158,
+      "fp": 14842,
+      "fn": 200,
+      "tp": 45132
+    },
+    "hybrid_and": {
+      "actual_fpr": 0.021135135135135135,
+      "precision": 0.9732658712522648,
+      "recall": 0.6280111179740581,
+      "f1": 0.7634179370634059,
+      "tn": 36218,
+      "fp": 782,
+      "fn": 16863,
+      "tp": 28469
+    },
+    "hybrid_or": {
+      "actual_fpr": 0.44935135135135135,
+      "precision": 0.7310970580148474,
+      "recall": 0.9971543280684726,
+      "f1": 0.8436464758634205,
+      "tn": 20374,
+      "fp": 16626,
+      "fn": 129,
+      "tp": 45203
+    }
+  }
+}

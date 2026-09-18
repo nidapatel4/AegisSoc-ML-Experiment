@@ -1,0 +1,77 @@
+{
+  "dataset": "UNSW-NB15",
+  "model": "Random Forest",
+  "threshold": 0.65,
+  "overall": {
+    "fpr": 0.1732972972972973,
+    "tn": 30588,
+    "fp": 6412,
+    "fn": 1610,
+    "tp": 43722
+  },
+  "attack_family_recall": [
+    {
+      "attack_family": "Analysis",
+      "total": 677,
+      "detected": 667,
+      "missed": 10,
+      "recall": 0.9852289512555391
+    },
+    {
+      "attack_family": "Backdoor",
+      "total": 583,
+      "detected": 583,
+      "missed": 0,
+      "recall": 1.0
+    },
+    {
+      "attack_family": "DoS",
+      "total": 4089,
+      "detected": 4078,
+      "missed": 11,
+      "recall": 0.9973098557104426
+    },
+    {
+      "attack_family": "Exploits",
+      "total": 11132,
+      "detected": 11031,
+      "missed": 101,
+      "recall": 0.9909270571325908
+    },
+    {
+      "attack_family": "Fuzzers",
+      "total": 6062,
+      "detected": 4594,
+      "missed": 1468,
+      "recall": 0.7578356977895084
+    },
+    {
+      "attack_family": "Generic",
+      "total": 18871,
+      "detected": 18869,
+      "missed": 2,
+      "recall": 0.9998940172751841
+    },
+    {
+      "attack_family": "Reconnaissance",
+      "total": 3496,
+      "detected": 3486,
+      "missed": 10,
+      "recall": 0.9971395881006865
+    },
+    {
+      "attack_family": "Shellcode",
+      "total": 378,
+      "detected": 370,
+      "missed": 8,
+      "recall": 0.9788359788359788
+    },
+    {
+      "attack_family": "Worms",
+      "total": 44,
+      "detected": 44,
+      "missed": 0,
+      "recall": 1.0
+    }
+  ]
+}

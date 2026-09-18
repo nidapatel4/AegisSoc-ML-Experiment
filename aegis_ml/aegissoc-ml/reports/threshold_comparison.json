@@ -1,0 +1,182 @@
+[
+  {
+    "model": "Isolation Forest",
+    "target_fpr": 0.01,
+    "threshold": 0.00010670189786190422,
+    "actual_fpr": 0.011945216764493873,
+    "precision": 0.9839312924227732,
+    "recall": 0.553494895971324,
+    "f1": 0.708458009176142
+  },
+  {
+    "model": "Isolation Forest",
+    "target_fpr": 0.02,
+    "threshold": 0.01723228583655608,
+    "actual_fpr": 0.018947585212645453,
+    "precision": 0.9763191763191763,
+    "recall": 0.5911322372009663,
+    "f1": 0.7363976119982527
+  },
+  {
+    "model": "Isolation Forest",
+    "target_fpr": 0.03,
+    "threshold": 0.029471871250891808,
+    "actual_fpr": 0.021521985377407064,
+    "precision": 0.9742959045627844,
+    "recall": 0.617314735447674,
+    "f1": 0.7557717992749475
+  },
+  {
+    "model": "Isolation Forest",
+    "target_fpr": 0.04,
+    "threshold": 0.03933121910583963,
+    "actual_fpr": 0.039027906497786015,
+    "precision": 0.955343466478143,
+    "recall": 0.6318086184056729,
+    "f1": 0.7606003752345216
+  },
+  {
+    "model": "Isolation Forest",
+    "target_fpr": 0.05,
+    "threshold": 0.0457408294886283,
+    "actual_fpr": 0.06085881989496447,
+    "precision": 0.9342310260405075,
+    "recall": 0.654172835658069,
+    "f1": 0.769512809936294
+  },
+  {
+    "model": "Isolation Forest",
+    "target_fpr": 0.06,
+    "threshold": 0.05187943557139295,
+    "actual_fpr": 0.06590464421789723,
+    "precision": 0.9315508021390374,
+    "recall": 0.6787189277643575,
+    "f1": 0.7852860298426723
+  },
+  {
+    "model": "Isolation Forest",
+    "target_fpr": 0.07,
+    "threshold": 0.05509355635314805,
+    "actual_fpr": 0.06693440428380187,
+    "precision": 0.9315429173249078,
+    "recall": 0.6892386815241954,
+    "f1": 0.792278753135077
+  },
+  {
+    "model": "Isolation Forest",
+    "target_fpr": 0.08,
+    "threshold": 0.059333057120818454,
+    "actual_fpr": 0.06961178045515395,
+    "precision": 0.929890064302012,
+    "recall": 0.6986674978570871,
+    "f1": 0.7978642936596217
+  },
+  {
+    "model": "Isolation Forest",
+    "target_fpr": 0.09,
+    "threshold": 0.0642520877465886,
+    "actual_fpr": 0.07362784471218206,
+    "precision": 0.9270780214176441,
+    "recall": 0.7083300864957531,
+    "f1": 0.8030744765438643
+  },
+  {
+    "model": "Isolation Forest",
+    "target_fpr": 0.1,
+    "threshold": 0.07043956858034806,
+    "actual_fpr": 0.0764081968901246,
+    "precision": 0.9253746354219049,
+    "recall": 0.7169796618093977,
+    "f1": 0.8079557428872497
+  },
+  {
+    "model": "One-Class SVM",
+    "target_fpr": 0.01,
+    "threshold": -0.11842295087849118,
+    "actual_fpr": 0.05076717124909896,
+    "precision": 0.9420953723279305,
+    "recall": 0.6250292215382218,
+    "f1": 0.7514873284302244
+  },
+  {
+    "model": "One-Class SVM",
+    "target_fpr": 0.02,
+    "threshold": 0.11035349766863146,
+    "actual_fpr": 0.05756358768406961,
+    "precision": 0.9389337994319423,
+    "recall": 0.6697576560430141,
+    "f1": 0.781825624232501
+  },
+  {
+    "model": "One-Class SVM",
+    "target_fpr": 0.03,
+    "threshold": 0.24210191022967484,
+    "actual_fpr": 0.06096179590155494,
+    "precision": 0.9369743425955499,
+    "recall": 0.6858100210395075,
+    "f1": 0.7919553675875102
+  },
+  {
+    "model": "One-Class SVM",
+    "target_fpr": 0.04,
+    "threshold": 0.3333381291680711,
+    "actual_fpr": 0.06549274019153538,
+    "precision": 0.9334310236550136,
+    "recall": 0.6949271409647004,
+    "f1": 0.796712377719212
+  },
+  {
+    "model": "One-Class SVM",
+    "target_fpr": 0.05,
+    "threshold": 0.39753705700716346,
+    "actual_fpr": 0.06837606837606838,
+    "precision": 0.9313907832196735,
+    "recall": 0.702407854749474,
+    "f1": 0.8008529163520057
+  },
+  {
+    "model": "One-Class SVM",
+    "target_fpr": 0.06,
+    "threshold": 0.46715288485417483,
+    "actual_fpr": 0.07187725260014417,
+    "precision": 0.928978428978429,
+    "recall": 0.7114470505727422,
+    "f1": 0.8057896827147963
+  },
+  {
+    "model": "One-Class SVM",
+    "target_fpr": 0.07,
+    "threshold": 0.5287665651663659,
+    "actual_fpr": 0.07455462877149624,
+    "precision": 0.9271043093032622,
+    "recall": 0.7175251305228707,
+    "f1": 0.8089611245332747
+  },
+  {
+    "model": "One-Class SVM",
+    "target_fpr": 0.08,
+    "threshold": 0.6016440961316828,
+    "actual_fpr": 0.0781587890021625,
+    "precision": 0.9242741694103562,
+    "recall": 0.7218888802306553,
+    "f1": 0.8106405320266014
+  },
+  {
+    "model": "One-Class SVM",
+    "target_fpr": 0.09,
+    "threshold": 0.6646714310917193,
+    "actual_fpr": 0.08155699721964782,
+    "precision": 0.9216229589312221,
+    "recall": 0.7257071612249669,
+    "f1": 0.8120149969482954
+  },
+  {
+    "model": "One-Class SVM",
+    "target_fpr": 0.1,
+    "threshold": 0.7287349812237749,
+    "actual_fpr": 0.08866234167438987,
+    "precision": 0.9160081943225051,
+    "recall": 0.7317073170731707,
+    "f1": 0.8135505111765725
+  }
+]
